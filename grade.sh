@@ -1,6 +1,7 @@
 CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
 
 rm -rf student-submission
+
 git clone $1 student-submission
 echo 'Finished cloning'
 
@@ -18,6 +19,7 @@ do
 
     fi
 done
+
 
 cp ListExamples.java ..
 cd ..
@@ -44,5 +46,5 @@ do
 done
 echo $TOTAL
 echo $WRONG
-# RIGHT=(($TOTAL - $WRONG))
-echo $WRONG/$TOTAL
+RIGHT= $TOTAL - $WRONG
+echo $RIGHT / $TOTAL
